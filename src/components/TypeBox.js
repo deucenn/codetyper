@@ -1,4 +1,5 @@
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
+import UserTypings from "./UserTypings";
 
 const codeInput = {
   name: "defer.js",
@@ -14,20 +15,18 @@ const codeInput = {
 
 const Code = () => {
   return (
-    <div className="bg-slate-800 p-4 rounded-2xl w-2/3 h-96 justify-center">
-      <h2 className="bg-slate-800 text-xl italic text-slate-400 mb-5">
-        {codeInput.name}
-      </h2>
-      <div className="bg-slate-800 text-2xl text-slate-200">
+    <div className="p-4 rounded-2xl w-2/3 h-96 justify-center">
+      <h2 className="text-xl italic text-slate-300 mb-5">{codeInput.name}</h2>
+      <div className="text-2xl text-slate-400">
         <SyntaxHighlighter
           useInlineStyles={false}
           language={codeInput.language}
-          className="bg-slate-800"
           lineProps={true}
-          customStyle={{ textAlign: "left", background: "#1F2937" }}
+          customStyle={{ textAlign: "left", position:"absolute", zIndex: 0 }}
         >
           {codeInput.code.trim()}
         </SyntaxHighlighter>
+        <UserTypings className="absolute z-50"/>
       </div>
     </div>
   );
