@@ -1,4 +1,3 @@
-import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import { useState } from "react";
 
 const UserTypings = () => {
@@ -9,25 +8,20 @@ const UserTypings = () => {
   };
 
   return (
-    <div>
+    <div className="flex-none">
       <div className="text-2xl text-slate-200">
-        <SyntaxHighlighter
-          useInlineStyles={false}
-          lineProps={true}
-          customStyle={{ textAlign: "left" }}
-        >
-        </SyntaxHighlighter>
         <textarea
-            rows="10" // Adjust the number of rows as needed
-            cols="50" // Adjust the number of columns as needed
-            value={userInput}
-            onChange={handleInputChange}
-            placeholder="function defer(func, ...args)"
-            className="resize-none w-2/3 h-96"
-          />
+          rows="10" // Adjust the number of rows as needed
+          cols="100" // Adjust the number of columns as needed
+          value={userInput}
+          onChange={handleInputChange}
+          placeholder=""
+          className="resize-none w-full h-96 focus:outline-none"
+        />
       </div>
     </div>
   );
 };
 
 export default UserTypings;
+
