@@ -1,3 +1,7 @@
+# &lt;codetyper/&gt;
+
+codetyper is a minimalistic typing speed testing app built with React and TailwindCSS that highly inspired by speedtyper. The app allows users to test and improve their typing speed and accuracy with code. The app provides a user-friendly interface and intuitive feedback on typing performance.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
