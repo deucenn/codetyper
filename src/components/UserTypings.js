@@ -1,4 +1,5 @@
 import { useState } from "react";
+import codeSnippets from "./codeSnippets";
 
 const UserTypings = () => {
   const [userInput, setUserInput] = useState("");
